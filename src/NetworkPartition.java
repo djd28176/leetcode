@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 
 class Edge implements Comparable<Edge> {
@@ -75,15 +78,23 @@ class Graph {
 
 public class NetworkPartition {
     public static void main(String[] args) {
-        int V = 4; // Number of vertices
+        int V = 5; // Number of vertices
         Graph graph = new Graph(V);
 
         // Add edges to the graph
-        graph.addEdge(1, 2, 4);
-        graph.addEdge(2, 3, 5);
-        graph.addEdge(3, 1, 3);
+//        graph.addEdge(1, 2, 4);
+//        graph.addEdge(2, 3, 5);
+//        graph.addEdge(3, 1, 3);
+        graph.addEdge(1, 2, 1);
+        graph.addEdge(2, 4, 2);
+        graph.addEdge(1, 3, 4);
+        graph.addEdge(3, 4, 3);
+        graph.addEdge(1, 4, 5);
+        graph.addEdge(2, 3, 6);
 
         // Find Minimum Spanning Tree
-        graph.kruskalMST(2-1);
+        graph.kruskalMST(2);
+
+
     }
 }
